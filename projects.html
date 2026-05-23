@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로젝트 | ilguner foodkiller</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="홈으로 이동">
+        <span class="brand-mark">IF</span>
+        <span class="brand-text">ilguner foodkiller</span>
+      </a>
+      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" data-menu-button>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" data-nav>
+        <div class="nav-item has-submenu">
+          <a href="about.html">회사소개</a>
+          <div class="submenu" aria-label="회사소개 하위 메뉴">
+            <a href="about.html">소개</a>
+            <a href="location.html">오시는길</a>
+          </div>
+        </div>
+        <a class="is-current" href="projects.html">프로젝트</a>
+        <a href="news.html">새소식</a>
+      </nav>
+    </header>
+
+    <main class="subpage snap-root">
+      <section class="project-visual snap-section" data-snap-section>
+        <div class="project-hero-background" data-slider data-interval="4200">
+          <!--
+            프로젝트 첫 화면 배경 슬라이드 이미지 교체 안내.
+            1) 아래 <div class="project-bg-slide"> 한 줄이 배경 슬라이드 1장입니다.
+            2) 이미지 교체: --slide-image: url('이미지주소') 값만 바꾸세요.
+            3) 로컬 이미지 예: --slide-image: url('images/project-hero-01.jpg')
+            4) 외부 이미지 예: --slide-image: url('https://example.com/project-hero.jpg')
+            5) 이미지 초점 조정: --slide-position 값을 center, top, bottom, 70% center 등으로 바꾸세요.
+            6) 슬라이드 추가: project-bg-slide div를 복사해서 추가하고, 아래 project-bg-dots 버튼도 같은 개수로 추가하세요.
+            7) 화면 비율과 이미지 비율이 다르면 일부가 잘릴 수 있습니다.
+          -->
+          <div class="project-bg-slide is-active" data-slide style="--slide-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1800&q=82'); --slide-position: center" aria-hidden="false"></div>
+          <div class="project-bg-slide" data-slide style="--slide-image: url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=1800&q=82'); --slide-position: center" aria-hidden="true"></div>
+          <div class="project-bg-slide" data-slide style="--slide-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1800&q=82'); --slide-position: center" aria-hidden="true"></div>
+        </div>
+        <div>
+          <p class="eyebrow">Projects</p>
+          <h1>프로젝트</h1>
+          <p>대표 프로젝트, 진행 사례, 작업 이미지를 모아 보여주는 전용 화면입니다.</p>
+        </div>
+        <div class="project-hero-panel">
+          <strong>Project Archive</strong>
+          <p>이미지는 배경 슬라이드로 전환됩니다.</p>
+        </div>
+        <div class="project-bg-dots" aria-label="프로젝트 배경 슬라이드 선택" data-slider-dots>
+          <button class="is-active" type="button" aria-label="1번 프로젝트 배경" data-slide-dot></button>
+          <button type="button" aria-label="2번 프로젝트 배경" data-slide-dot></button>
+          <button type="button" aria-label="3번 프로젝트 배경" data-slide-dot></button>
+        </div>
+      </section>
+
+      <section class="project-list-section snap-section" data-snap-section>
+        <!--
+          프로젝트 카드 추가/수정 안내.
+          새 프로젝트 추가: <article class="project-card">...</article> 블록을 복사해서 project-card-grid 안에 붙여 넣으세요.
+          표시 규칙: script.js가 project-card 개수를 자동 계산해서 3개당 1페이지로 나눕니다.
+          예: 1~3개는 1페이지, 4~6개는 2페이지, 7~9개는 3페이지입니다.
+
+          프로젝트 이미지:
+          <div class="project-thumb" style="--project-image: url('이미지주소')"></div>의 URL을 바꾸세요.
+          로컬 이미지 예: --project-image: url('images/project-01.jpg')
+          외부 이미지 예: --project-image: url('https://example.com/project.jpg')
+          이미지를 추가할 때는 project-thumb 블록을 카드 안에 1개만 유지하세요.
+          이미지 위치가 어색하면 styles.css의 .project-thumb background-position을 조정하거나,
+          필요한 경우 카드별로 style에 --project-position 값을 추가하는 방식으로 확장할 수 있습니다.
+
+          프로젝트 번호:
+          <span class="project-index">01</span> 숫자를 수정하세요.
+
+          프로젝트명:
+          <strong>프로젝트명 입력</strong> 텍스트를 수정하세요.
+
+          프로젝트 내용:
+          <p class="project-summary">...</p> 안의 설명을 수정하세요.
+
+          프로젝트 방식:
+          <span class="project-method">방식: ...</span> 안의 방식을 수정하세요.
+        -->
+        <div class="project-card-grid" data-project-list>
+          <article class="project-card">
+            <div class="project-thumb" style="--project-image: url('https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80')"></div>
+            <span class="project-index">01</span>
+            <strong>프로젝트명 입력</strong>
+            <p class="project-summary">신규 브랜드 메뉴 개발과 운영 시스템 구성을 위한 샘플 프로젝트 내용입니다.</p>
+            <span class="project-method">방식: 기획 · 촬영 · 운영 설계</span>
+          </article>
+          <article class="project-card">
+            <div class="project-thumb" style="--project-image: url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=900&q=80')"></div>
+            <span class="project-index">02</span>
+            <strong>프로젝트명 입력</strong>
+            <p class="project-summary">제품 소개용 이미지와 콘텐츠를 정리하는 샘플 프로젝트 내용입니다.</p>
+            <span class="project-method">방식: 콘텐츠 제작 · 상세 구성</span>
+          </article>
+          <article class="project-card">
+            <div class="project-thumb" style="--project-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80')"></div>
+            <span class="project-index">03</span>
+            <strong>프로젝트명 입력</strong>
+            <p class="project-summary">실제 포트폴리오 자료가 확정되면 교체할 수 있는 샘플 프로젝트입니다.</p>
+            <span class="project-method">방식: 현장 운영 · 결과 정리</span>
+          </article>
+          <article class="project-card">
+            <div class="project-thumb" style="--project-image: url('https://images.unsplash.com/photo-1543353071-10c8ba85a904?auto=format&fit=crop&w=900&q=80')"></div>
+            <span class="project-index">04</span>
+            <strong>프로젝트명 입력</strong>
+            <p class="project-summary">페이지네이션 동작 확인을 위한 추가 샘플 프로젝트입니다.</p>
+            <span class="project-method">방식: 브랜드 기획 · 콘텐츠 구성</span>
+          </article>
+        </div>
+        <div class="project-pagination" data-project-pagination aria-label="프로젝트 페이지 선택"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>ilguner foodkiller</strong>
+      <p>주소: 실제 회사 주소 입력</p>
+      <p>대표번호: 000-0000-0000 · 이메일: contact@example.com</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

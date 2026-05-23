@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>새소식 | ilguner foodkiller</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="홈으로 이동"><span class="brand-mark">IF</span><span class="brand-text">ilguner foodkiller</span></a>
+      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" data-menu-button><span></span><span></span><span></span></button>
+      <nav class="site-nav" data-nav>
+        <div class="nav-item has-submenu">
+          <a href="about.html">회사소개</a>
+          <div class="submenu" aria-label="회사소개 하위 메뉴"><a href="about.html">소개</a><a href="location.html">오시는길</a></div>
+        </div>
+        <a href="projects.html">프로젝트</a>
+        <a class="is-current" href="news.html">새소식</a>
+      </nav>
+    </header>
+    <main class="subpage snap-root">
+      <section class="page-section news-hero-section snap-section" data-snap-section>
+        <div class="news-hero-background" data-slider data-interval="4800">
+          <!--
+            새소식 첫 화면 배경 슬라이드 이미지 교체 안내.
+            1) 아래 <div class="news-bg-slide"> 한 줄이 배경 슬라이드 1장입니다.
+            2) 이미지 교체: --slide-image: url('이미지주소') 값만 바꾸세요.
+            3) 로컬 이미지 예: --slide-image: url('images/news-hero-01.jpg')
+            4) 외부 이미지 예: --slide-image: url('https://example.com/news-hero.jpg')
+            5) 이미지 초점 조정: --slide-position 값을 center, top, bottom, 70% center 등으로 바꾸세요.
+            6) 슬라이드 추가: news-bg-slide div를 복사해서 추가하고, 아래 news-bg-dots 버튼도 같은 개수로 추가하세요.
+            7) 화면 비율과 이미지 비율이 다르면 일부가 잘릴 수 있습니다.
+            8) 글자가 안 보이면 styles.css의 .news-bg-slide::after 배경 투명도를 조정하세요.
+          -->
+          <div class="news-bg-slide is-active" data-slide style="--slide-image: url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=82'); --slide-position: center" aria-hidden="false"></div>
+          <div class="news-bg-slide" data-slide style="--slide-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1800&q=82'); --slide-position: center" aria-hidden="true"></div>
+          <div class="news-bg-slide" data-slide style="--slide-image: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1800&q=82'); --slide-position: center" aria-hidden="true"></div>
+        </div>
+        <div class="news-hero-copy">
+          <p class="eyebrow">News</p>
+          <h1>새소식</h1>
+          <p>공지사항, 보도자료, 업데이트 내용을 한눈에 확인할 수 있습니다.</p>
+        </div>
+        <div class="featured-news">
+          <span>Latest</span>
+          <time datetime="2026-05-23">2026.05.23</time>
+          <strong>ilguner foodkiller 홈페이지 시안 구성</strong>
+          <p>메인 슬라이드, 회사소개, 프로젝트, 새소식 페이지 구조를 정리했습니다.</p>
+        </div>
+        <div class="news-bg-dots" aria-label="새소식 배경 슬라이드 선택" data-slider-dots>
+          <button class="is-active" type="button" aria-label="1번 새소식 배경" data-slide-dot></button>
+          <button type="button" aria-label="2번 새소식 배경" data-slide-dot></button>
+          <button type="button" aria-label="3번 새소식 배경" data-slide-dot></button>
+        </div>
+      </section>
+      <section class="page-section alt snap-section" data-snap-section>
+        <!--
+          새소식 수정 안내.
+          새 글 추가: 아래 news-list 안에 <a class="news-card">...</a> 블록을 복사해서 붙여 넣으세요.
+          최신 글을 위에 보이게 하려면 새 news-card를 목록의 가장 위에 추가하세요.
+          제목 수정: <strong>...</strong> 안의 텍스트를 바꾸세요. 제목 글꼴은 크게 유지됩니다.
+          내용 수정: <p>...</p> 안의 텍스트를 바꾸세요. 내용 글꼴은 제목보다 작게 표시됩니다.
+          날짜 수정: <time datetime="YYYY-MM-DD">YYYY.MM.DD</time> 두 곳을 같은 날짜로 맞추세요.
+          링크 연결: href="#"를 실제 상세 페이지 주소로 바꾸세요. 예: href="news-detail.html"
+          표시 규칙: script.js가 news-card 개수를 자동 계산해서 9개당 1페이지로 나눕니다.
+          예: 1~9개는 1페이지, 10~18개는 2페이지, 19~27개는 3페이지입니다.
+          최신 1건 카드: 위쪽 .featured-news는 자동 연동이 아닙니다. 최신 소식이 바뀌면 해당 영역도 직접 수정하세요.
+          주의: 실제 게시판 저장, 검색, 관리자 작성 기능은 백엔드 또는 별도 CMS가 있어야 합니다.
+        -->
+        <div class="news-list" data-news-list>
+          <a class="news-card" href="#"><time datetime="2026-05-23">2026.05.23</time><strong>ilguner foodkiller 홈페이지 시안 구성</strong><p>메인 슬라이드와 회사 소개 기본 화면을 구성했습니다.</p></a>
+          <a class="news-card" href="#"><time datetime="2026-05-23">2026.05.23</time><strong>회사 소개 문구 및 이미지 자료 필요</strong><p>실제 브랜드 소개 문구와 사용할 이미지를 정리해야 합니다.</p></a>
+          <a class="news-card" href="#"><time datetime="2026-05-23">2026.05.23</time><strong>프로젝트 콘텐츠 등록 준비</strong><p>프로젝트명, 기간, 대표 이미지, 설명 문구를 준비하세요.</p></a>
+          <a class="news-card" href="#"><time datetime="2026-05-22">2026.05.22</time><strong>브랜드 운영 소식 샘플</strong><p>운영 관련 공지나 안내 문구를 넣는 샘플 카드입니다.</p></a>
+          <a class="news-card" href="#"><time datetime="2026-05-21">2026.05.21</time><strong>신규 프로젝트 준비 안내</strong><p>진행 예정 프로젝트의 간단한 소개를 넣을 수 있습니다.</p></a>
+          <a class="news-card" href="#"><time datetime="2026-05-20">2026.05.20</time><strong>서비스 업데이트 안내</strong><p>서비스 변경 사항이나 업데이트 내용을 요약합니다.</p></a>
+          <a class="news-card" href="#"><time datetime="2026-05-19">2026.05.19</time><strong>파트너십 소식 샘플</strong><p>제휴, 협업, 계약 관련 소식을 작성하는 영역입니다.</p></a>
+          <a class="news-card" href="#"><time datetime="2026-05-18">2026.05.18</time><strong>현장 운영 기록 샘플</strong><p>현장 사진이나 운영 기록을 연결할 수 있습니다.</p></a>
+          <a class="news-card" href="#"><time datetime="2026-05-17">2026.05.17</time><strong>공지사항 샘플</strong><p>방문자에게 알려야 할 공지 내용을 짧게 작성하세요.</p></a>
+          <a class="news-card" href="#"><time datetime="2026-05-16">2026.05.16</time><strong>추가 소식 샘플 1</strong><p>이 카드는 + 버튼을 누른 뒤 보입니다.</p></a>
+          <a class="news-card" href="#"><time datetime="2026-05-15">2026.05.15</time><strong>추가 소식 샘플 2</strong><p>9개 초과 항목 표시 동작 확인용 샘플입니다.</p></a>
+          <a class="news-card" href="#"><time datetime="2026-05-14">2026.05.14</time><strong>추가 소식 샘플 3</strong><p>추후 실제 새소식으로 교체하세요.</p></a>
+        </div>
+        <div class="news-controls" data-news-controls>
+          <div class="news-pagination" data-news-pagination aria-label="새소식 페이지 선택"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><strong>ilguner foodkiller</strong><p>주소: 실제 회사 주소 입력</p><p>대표번호: 000-0000-0000 · 이메일: contact@example.com</p></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

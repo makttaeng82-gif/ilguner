@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ilguner foodkiller</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="홈으로 이동">
+        <span class="brand-mark">IF</span>
+        <span class="brand-text">ilguner foodkiller</span>
+      </a>
+      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" data-menu-button>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" data-nav>
+        <div class="nav-item has-submenu">
+          <a href="about.html">회사소개</a>
+          <div class="submenu" aria-label="회사소개 하위 메뉴">
+            <a href="about.html">소개</a>
+            <a href="location.html">오시는길</a>
+          </div>
+        </div>
+        <a href="projects.html">프로젝트</a>
+        <a href="news.html">새소식</a>
+      </nav>
+    </header>
+
+    <main class="snap-root">
+      <section class="main-hero snap-section" data-snap-section aria-label="메인 이미지 슬라이드">
+        <div class="hero-background" data-slider data-interval="5200">
+          <!--
+            메인 첫 화면 배경 슬라이드 이미지 교체 안내.
+            1) 아래 <div class="slide-image"> 한 줄이 슬라이드 1장입니다.
+            2) 이미지 교체: --slide-image: url('이미지주소') 값만 바꾸세요.
+            3) 로컬 이미지 예: --slide-image: url('images/main-01.jpg')
+            4) 외부 이미지 예: --slide-image: url('https://example.com/main.jpg')
+            5) 이미지 초점 조정: --slide-position 값을 center, top, bottom, 70% center 등으로 바꾸세요.
+            6) 슬라이드 추가: slide-image div를 복사해서 추가하고, 아래 data-slide-dot 버튼도 같은 개수로 추가하세요.
+            7) 화면 비율과 이미지 비율이 다르면 일부가 잘릴 수 있습니다.
+            8) 이미지 전체가 반드시 보여야 하면 styles.css의 .slide-image background-size를 contain으로 바꾸세요.
+               단, contain은 이미지 양옆이나 위아래에 빈 공간이 생길 수 있습니다.
+          -->
+          <div class="slide-image is-active" data-slide style="--slide-image: url('https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1920&q=82'); --slide-position: center" aria-hidden="false"></div>
+          <div class="slide-image" data-slide style="--slide-image: url('https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1920&q=82'); --slide-position: center" aria-hidden="true"></div>
+          <div class="slide-image" data-slide style="--slide-image: url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1920&q=82'); --slide-position: center" aria-hidden="true"></div>
+        </div>
+
+        <div class="main-hero-inner">
+          <div class="main-copy">
+            <p class="eyebrow">Food Business Partner</p>
+            <h1>ilguner foodkiller</h1>
+            <p>좋은 식품 경험을 만들기 위한 브랜드, 프로젝트, 소식을 소개합니다.</p>
+            <a class="hero-link" href="about.html">
+              <span>회사소개 바로가기</span>
+              <strong aria-hidden="true">→</strong>
+            </a>
+          </div>
+          <!--
+            메인 우측 네모 카드 수정 위치.
+            배경 이미지 교체: --hero-card-image URL을 바꾸세요.
+            예: --hero-card-image: url('images/main-card.jpg')
+            카드 큰 문구 수정: <strong>...</strong> 텍스트를 바꾸세요.
+            카드 작은 문구 수정: <span>...</span> 텍스트를 바꾸세요.
+            이미지 초점이 안 맞으면 --hero-card-position 값을 center, top, 70% center 등으로 바꾸세요.
+          -->
+          <div
+            class="hero-card"
+            style="--hero-card-image: url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=82'); --hero-card-position: center"
+            aria-hidden="true"
+          >
+            <div class="card-glow">
+              <strong>FOODKILLER</strong>
+              <span>Brand · Project · News</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-control" aria-label="슬라이드 선택" data-slider-dots>
+          <button class="is-active" type="button" aria-label="1번 슬라이드" data-slide-dot></button>
+          <button type="button" aria-label="2번 슬라이드" data-slide-dot></button>
+          <button type="button" aria-label="3번 슬라이드" data-slide-dot></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>ilguner foodkiller</strong>
+      <p>주소: 실제 회사 주소 입력</p>
+      <p>대표번호: 000-0000-0000 · 이메일: contact@example.com</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>소개 | ilguner foodkiller</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="홈으로 이동">
+        <span class="brand-mark">IF</span>
+        <span class="brand-text">ilguner foodkiller</span>
+      </a>
+      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" data-menu-button>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" data-nav>
+        <div class="nav-item has-submenu">
+          <a class="is-current" href="about.html">회사소개</a>
+          <div class="submenu" aria-label="회사소개 하위 메뉴">
+            <a href="about.html">소개</a>
+            <a href="location.html">오시는길</a>
+          </div>
+        </div>
+        <a href="projects.html">프로젝트</a>
+        <a href="news.html">새소식</a>
+      </nav>
+    </header>
+
+    <main class="subpage snap-root">
+      <section class="about-intro page-section snap-section" data-snap-section>
+        <div>
+          <p class="eyebrow">About</p>
+          <h1>소개</h1>
+          <p>ilguner foodkiller의 실제 사업 내용, 연혁, 대표자, 인증 정보가 확정되면 이 페이지에 반영하세요.</p>
+        </div>
+        <!--
+          소개 첫 화면 우측 문구 수정 위치.
+          아래 .about-side-copy 안의 문장을 사용자가 직접 원하는 회사 소개 문구로 바꾸면 됩니다.
+          줄바꿈은 <p>...</p> 블록을 추가하거나 기존 문장을 수정하세요.
+        -->
+        <aside class="about-side-copy">
+          <strong>여기에 회사 핵심 문구를 입력하세요.</strong>
+          <p>브랜드 철학, 고객에게 전달하고 싶은 약속, 회사의 방향성을 짧게 적는 공간입니다.</p>
+        </aside>
+      </section>
+
+      <section class="page-section alt snap-section" data-snap-section>
+        <div class="info-grid">
+          <article><strong>Identity</strong><p>브랜드 소개와 핵심 가치를 배치합니다.</p></article>
+          <article><strong>Service</strong><p>제공 서비스, 제품, 운영 방식을 정리합니다.</p></article>
+          <article><strong>Contact Point</strong><p>상담, 제휴, 프로젝트 문의로 이어지는 정보를 넣습니다.</p></article>
+        </div>
+      </section>
+
+      <section class="certificate-section snap-section" data-snap-section>
+        <div class="certificate-head">
+          <p class="eyebrow">Certificate</p>
+          <h2>인증서</h2>
+        </div>
+        <!--
+          인증서 이미지 교체 위치.
+          아래 certificate-grid 안에 figure 블록을 추가하면 인증서가 표시됩니다.
+          실제 증명서 이미지 파일을 프로젝트 폴더에 넣고 img src 값을 바꾸세요.
+          예: src="images/certificate-01.jpg"
+          권장: 세로형 이미지, JPG/PNG/WebP 가능.
+          제목은 <figcaption>...</figcaption> 안의 텍스트를 바꾸면 됩니다.
+
+          추가 예시:
+          <figure>
+            <img src="images/certificate-01.jpg" alt="벤처기업 확인서" />
+            <figcaption>벤처기업 확인서</figcaption>
+          </figure>
+        -->
+        <div class="certificate-grid">
+          <figure>
+            <div class="certificate-placeholder">Sample</div>
+            <figcaption>벤처기업 확인서</figcaption>
+          </figure>
+          <figure>
+            <div class="certificate-placeholder">Sample</div>
+            <figcaption>강소기업 확인서</figcaption>
+          </figure>
+          <figure>
+            <div class="certificate-placeholder">Sample</div>
+            <figcaption>기술 인증서</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>ilguner foodkiller</strong>
+      <p>주소: 실제 회사 주소 입력</p>
+      <p>대표번호: 000-0000-0000 · 이메일: contact@example.com</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오시는길 | ilguner foodkiller</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="홈으로 이동">
+        <span class="brand-mark">IF</span>
+        <span class="brand-text">ilguner foodkiller</span>
+      </a>
+      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" data-menu-button>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" data-nav>
+        <div class="nav-item has-submenu">
+          <a class="is-current" href="about.html">회사소개</a>
+          <div class="submenu" aria-label="회사소개 하위 메뉴">
+            <a href="about.html">소개</a>
+            <a href="location.html">오시는길</a>
+          </div>
+        </div>
+        <a href="projects.html">프로젝트</a>
+        <a href="news.html">새소식</a>
+      </nav>
+    </header>
+
+    <main class="subpage snap-root">
+      <section class="location-first snap-section" data-snap-section>
+        <div class="location-copy">
+          <p class="eyebrow">Location</p>
+          <h1>오시는길</h1>
+          <!--
+            지도 주소 수정 위치.
+            1) 아래 data-map-address 값에 실제 주소를 입력하세요.
+            2) 예: data-map-address="서울특별시 강남구 테헤란로 123"
+            3) script.js가 이 값을 읽어 Google 지도 검색 iframe을 자동 갱신합니다.
+            4) 정확한 핀 고정이 필요하면 추후 Google Maps API 키 또는 네이버/카카오 지도 API 연동이 필요합니다.
+          -->
+          <div class="location-info" data-map-address="서울특별시 중구 세종대로 110">
+            <article><strong>주소</strong><p data-address-text>서울특별시 중구 세종대로 110</p></article>
+            <article><strong>대표번호</strong><p>000-0000-0000</p></article>
+            <article><strong>이메일</strong><p>contact@example.com</p></article>
+          </div>
+        </div>
+        <iframe class="map-frame" title="회사 위치 지도" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>ilguner foodkiller</strong>
+      <p>주소: 실제 회사 주소 입력</p>
+      <p>대표번호: 000-0000-0000 · 이메일: contact@example.com</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
